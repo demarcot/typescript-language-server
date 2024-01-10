@@ -2,5 +2,6 @@
 *.tsbuildinfo
 .DS_Store
 /.rollup.cache/
+!/lib/cli.mjs
 /lib/
 node_modules/
