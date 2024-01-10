@@ -246,7 +246,8 @@ export class TsClient implements ITypeScriptServiceClient {
         // Yarn v2+ hooks tsserver and sends `zipfile:` URIs for Vim. Keep as-is.
         // Example: zipfile:///foo/bar/baz.zip::path/to/module
         if (filepath.startsWith('zipfile:')) {
-            return URI.parse(filepath);
+            // return URI.parse(filepath);
+            return filepath;
         }
         const fileUri = URI.file(filepath);
         const document = this.documents.get(fileUri.fsPath);
